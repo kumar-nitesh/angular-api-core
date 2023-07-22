@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>Medicine ID</th>
+        <th>Name</th>
+        <th>Expiry Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of medicines">
+      <td>{{dataItem.id}}</td>
+      <td>{{dataItem.name}}</td>
+      <td [style.color]="getExpiryColor(dataItem)">{{dataItem.expiryDate}}</td>      
+    </tr>
+  </tbody>
+</table>
